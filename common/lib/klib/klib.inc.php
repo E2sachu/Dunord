@@ -1,0 +1,9 @@
+<?php
+//TOOLS
+require_once(__DIR__.'/tools/tools.inc.php');
+require_once(__DIR__.'/config-default.php');
+//COMPONENTS
+require_once(__DIR__.'/component/component.inc.php');
+//BASE
+require_once(__DIR__.'/base/base.inc.php');
+?>

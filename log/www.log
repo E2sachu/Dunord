@@ -1,0 +1,31 @@
+[11/12/2013 10:47:47][1386755267][192.168.42.38][/monkey-tie-api/Offer/list][300][405 Method Not Allowed][/Share/www/monkey-tie-api/include/lib/klib/base/controller.class.php][38]
+Track : 
+0 -> /Share/www/monkey-tie-api/index.php(l13): KLib\Log::warning()
+[11/12/2013 10:47:47][1386755267][192.168.42.38][/monkey-tie-api/Offer/list][300][#0 /Share/www/monkey-tie-api/include/lib/klib/base/controller.class.php(19): KLib\BaseController->runAction()
+#1 /Share/www/monkey-tie-api/index.php(10): KLib\BaseController::run('Offer', 'list')
+#2 {main}]
+Track : 
+0 -> /Share/www/monkey-tie-api/index.php(l14): KLib\Log::warning()
+[11/12/2013 10:47:47][1386755267][192.168.42.38][/monkey-tie-api/Offer/list][250][total => 125.83589553833ms][BENCH]
+[11/12/2013 10:48:11][1386755291][192.168.42.38][/monkey-tie-api/Offer/add][300][401 Unauthorized][/Share/www/monkey-tie-api/include/class/user.class.php][28]
+Track : 
+0 -> /Share/www/monkey-tie-api/index.php(l13): KLib\Log::warning()
+[11/12/2013 10:48:11][1386755291][192.168.42.38][/monkey-tie-api/Offer/add][300][#0 /Share/www/monkey-tie-api/include/ctrl/ctrl_offer.php(31): User::authentify('VmH6jrHXpdfzgeG...', 'Qinf1binpjVTpzH...', 2)
+#1 /Share/www/monkey-tie-api/include/lib/klib/base/controller.class.php(55): OfferController->preOffer()
+#2 /Share/www/monkey-tie-api/include/lib/klib/base/controller.class.php(19): KLib\BaseController->runAction()
+#3 /Share/www/monkey-tie-api/index.php(10): KLib\BaseController::run('Offer', 'add')
+#4 {main}]
+Track : 
+0 -> /Share/www/monkey-tie-api/index.php(l14): KLib\Log::warning()
+[11/12/2013 10:48:12][1386755292][192.168.42.38][/monkey-tie-api/Offer/add][250][total => 1038.889169693ms][BENCH]
+[11/12/2013 10:50:04][1386755404][192.168.42.38][/monkey-tie-api/Offer/add][300][401 Unauthorized][/Share/www/monkey-tie-api/include/class/user.class.php][28]
+Track : 
+0 -> /Share/www/monkey-tie-api/index.php(l13): KLib\Log::warning()
+[11/12/2013 10:50:04][1386755404][192.168.42.38][/monkey-tie-api/Offer/add][300][#0 /Share/www/monkey-tie-api/include/ctrl/ctrl_offer.php(31): User::authentify('VmH6jrHXpdfzgeG...', 'Qinf1binpjVTpzH...', 2)
+#1 /Share/www/monkey-tie-api/include/lib/klib/base/controller.class.php(55): OfferController->preOffer()
+#2 /Share/www/monkey-tie-api/include/lib/klib/base/controller.class.php(19): KLib\BaseController->runAction()
+#3 /Share/www/monkey-tie-api/index.php(10): KLib\BaseController::run('Offer', 'add')
+#4 {main}]
+Track : 
+0 -> /Share/www/monkey-tie-api/index.php(l14): KLib\Log::warning()
+[11/12/2013 10:50:05][1386755405][192.168.42.38][/monkey-tie-api/Offer/add][250][total => 1032.9291820526ms][BENCH]

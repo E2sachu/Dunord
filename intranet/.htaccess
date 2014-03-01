@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteBase /intranet/
+
+RewriteRule ^([0-9a-zA-Z-]+)(/([0-9a-zA-Z-]+)(/([0-9a-zA-Z]+))?)?$ index.php?ctrl=$1&param1=$3&param2=$5 [L,QSA]
+

@@ -1,0 +1,10 @@
+{
+	 "mika":{
+                "password":"7ceab396d4839d9d9929eb664458b450",
+                "actived": true,
+                "mail": "m.langlet@monkey-tie.com",
+                "sureName": "LANGLET",
+                "firstName": "Mickael",
+                "rights": ["*"]
+        }
+}

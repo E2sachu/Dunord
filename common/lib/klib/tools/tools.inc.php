@@ -1,0 +1,12 @@
+<?php
+require_once(__DIR__.'/config.class.php');
+require_once(__DIR__.'/log.class.php');
+require_once(__DIR__.'/request.class.php');
+require_once(__DIR__.'/instance.class.php');
+require_once(__DIR__.'/validator.class.php');
+require_once(__DIR__.'/checks.fct.php');
+require_once(__DIR__.'/bench.class.php');
+require_once(__DIR__.'/file.class.php');
+require_once(__DIR__.'/str.class.php');
+require_once(__DIR__.'/cast.class.php');
+?>
