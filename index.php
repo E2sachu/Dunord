@@ -1,3 +1,3 @@
 <?php
-	header('location:intranet/index.php');
+	header('location:intranet/');
 ?>

@@ -32,16 +32,23 @@ class Material extends KLib\BaseModel {
 	 */
 	protected $dateCrea = 0;
 
+	/**
+	 * Material Reference
+	 * @var int
+	 */
+	protected $ref = 0;
+
 	public function __construct($id=null) {
 		if (is_a($id, 'MongoId'))
 			$id = (string)$id;
 		if (is_string($id)){
 			$data = KLib\MongoDB::findOne(array('_id'=> $id), 'material');
-			$this->id 		= 	(string)$data['id'];
+			$this->id 		= 	(string)$data['_id'];
 			$this->label 	=	(string)$data['label'];
 			$this->type 	= 	(string)$data['type'];
 			$this->userId	=	(string)$data['userId'];
-			$this->dateCrea =	(string)$data['dateCrea'];
+			$this->dateCrea =	(int)$data['dateCrea'];
+			$this->ref 		=	(int)$data['ref'];
 		} elseif (!is_null($id)){
 			throw new Exception('INVALID MATERIAL ID', 500);
 		}
@@ -65,6 +72,10 @@ class Material extends KLib\BaseModel {
 
 	public function getDateCrea() {
 		return $this->dateCrea;
+	}
+
+	public function getRef() {
+		return $this->ref;
 	}
 
 	public function setLabel($data='') {
@@ -91,6 +102,12 @@ class Material extends KLib\BaseModel {
         $this->ca = intval($data);
 	}
 
+	public function setRef($data=0) {
+		if (!is_numeric($data))
+            throw new Exception('INVALID MATERIAL DATE', 500);
+        $this->ref = $data;
+	}
+
 	public function save($fields=array(), $collection=null){
         if (!is_array($fields) && !empty($fields))
             throw new Exception('INVALID SAVEDFIELDS', 500);
@@ -100,7 +117,8 @@ class Material extends KLib\BaseModel {
         	'label',
         	'type',
         	'userId',
-        	'dateCrea'
+        	'dateCrea',
+        	'ref',
         );
         return parent::save(array_merge($savedFields, $fields), $collection);
     }
@@ -113,7 +131,8 @@ class Material extends KLib\BaseModel {
         	'label',
         	'type',
         	'userId',
-        	'dateCrea'
+        	'dateCrea',
+        	'ref',
         );
         return parent::update(array_merge($savedFields, $fields), $collection);
     }

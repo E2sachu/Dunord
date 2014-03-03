@@ -22,4 +22,10 @@
 		'i' => 'Informatique',
 		'x' => 'Autre', 
 	));
+
+	Config::setKey('RIGHT',array(
+		'1' => 'niveau 1',
+		'2' => 'niveau 2',
+		'5' => 'administrateur'
+	));
 ?>

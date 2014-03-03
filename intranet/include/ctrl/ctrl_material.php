@@ -3,9 +3,14 @@
 Class MaterialController extends KLib\HTMLController{
 	protected $js = array();
 	protected $css = array();
-	protected $actions = array( 'home' 	=> array(
-												'before'	=>	'preAuthentify',
-												'run' 		=>	'home',
+	protected $actions = array( 
+								'home' 	=> array(
+										'before'	=>	'preAuthentify',
+										'run' 		=>	'home',
+								),
+								'add'	=>array(
+										'before'	=>	'preAuthentify',
+										'run'		=> 	'add',
 								),
 							);
 	public function preAuthentify(){
@@ -19,8 +24,14 @@ Class MaterialController extends KLib\HTMLController{
 		}else
 			throw new Exception('INVALID USER', 401);
 	}
-	public function home($corp=null){
+	
+	public function home(){
 		$this->smarty->assign('stat', STAT::materials());
 		$this->mainTpl = 'material/layout.tpl';
+	}
+
+	public function add(){
+		$this->smarty->assign('type', C::g('MATERIAL_TYPE'));
+		$this->mainTpl = 'material/new';
 	}
 }
